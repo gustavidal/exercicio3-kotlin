@@ -157,8 +157,10 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 .height(20.dp)
         )
 
-        var statusIdade: String = if (idade < 18) {
+        val statusIdade: String = if (idade < 18) {
             "MENOR"
+        } else if (idade >= 100){
+            "SÊNIOR"
         } else {
             "MAIOR"
         }
